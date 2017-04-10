@@ -35,29 +35,22 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 
-    li {
+    a {
       color: $quarternary-color;
       text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
       display: inline-block;
       padding: 0 20px;
-      margin: auto;
 
-      a {
-        cursor: pointer;
-        text-decoration: none;
-        display: block;
+      &:hover {
+        background: black;
         color: $quarternary-color;
-        padding: 5px;
+        border-radius: 10px;
+      }
 
-        &:hover {
-          background: black;
-          color: inherit;
-          border-radius: 10px;
-        }
-
-        &:visited {
-          color: inherit;
-        }
+      &:visited {
+        color: $quarternary-color;
       }
     }
   }
