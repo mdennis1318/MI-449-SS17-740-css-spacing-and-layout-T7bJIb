@@ -7,28 +7,16 @@ body {
   background-color: $primary-color;
 }
 
-.counter-container {
-  background: darken($primary-color, 25%);
-  width: 50%;
-  margin: auto;
-  border-radius: 15px;
+a {
+  color: $link-color;
 
-  .counter-head {
-    padding: 50px;
-    font-size: $font-base-size * 3;
-    margin-bottom: 0;
+  &:visited {
+    color: $link-clicked-color;
   }
 
-  #counter {
-    font-size: $font-base-size * 8;
-    padding-bottom: 50px;
-    margin-top: 0;
-    color: $secondary-color;
+  &:hover {
+    color: #18453b;
   }
-}
-
-.home {
-  text-align: center;
 }
 
 header {
@@ -44,6 +32,7 @@ header {
     width: 100%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     li {
@@ -62,7 +51,12 @@ header {
 
         &:hover {
           background: black;
+          color: inherit;
           border-radius: 10px;
+        }
+
+        &:visited {
+          color: inherit;
         }
       }
     }
@@ -72,9 +66,105 @@ header {
 h1 {
   color: $secondary-color;
   font-size: $font-base-size * 3;
+  text-align: center;
 
   &.welcome {
     font-size: $font-base-size * 10;
     margin: 0;
+  }
+}
+
+p {
+  &.section-header {
+    font-size: $font-base-size * 1.5;
+    color: $secondary-color;
+    text-transform: uppercase;
+    margin: 5px 15px 0;
+    font-weight: bold;
+  }
+
+  &.resume-link {
+    color: black;
+    font-size: $font-base-size * 2;
+    text-align: center;
+  }
+
+  &.emphasis-p {
+    font-size: $font-base-size * 1.25;
+    font-weight: bold;
+  }
+
+  &.indent-paragraph {
+    padding-left: 25px;
+  }
+}
+
+div {
+  &.home {
+    text-align: center;
+  }
+
+  &.counter-container {
+    background: darken($primary-color, 25%);
+    width: 50%;
+    margin: auto;
+    border-radius: 15px;
+
+    .counter-head {
+      padding: 50px;
+      font-size: $font-base-size * 3;
+      margin-bottom: 0;
+    }
+
+    #counter {
+      font-size: $font-base-size * 8;
+      padding-bottom: 50px;
+      margin-top: 0;
+      color: $secondary-color;
+    }
+  }
+
+  &.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &.inner-content {
+    padding: 0 30px;
+  }
+
+  &.section-box {
+    display: inline-block;
+    flex-basis: 400px;
+    border: 5px solid $tertiary-color;
+    border-radius: 15px;
+    margin: 15px auto;
+    background: lighten($tertiary-color, 55%);
+  }
+
+  &.github-div {
+    text-align: center;
+  }
+
+  &.schools {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+ul {
+  &.spec-list {
+    padding-left: 50px;
+  }
+}
+
+img {
+  &.profileImg {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 5px;
   }
 }
